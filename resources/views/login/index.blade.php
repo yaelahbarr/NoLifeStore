@@ -2,7 +2,44 @@
 
 @section('container')
 
-<div class="row justify-content-center">
+<div class="uk-container uk-margin-large-top">
+    <div class="uk-card uk-card-default uk-width-1-2@m uk-margin-auto">
+        <div class="uk-card-header">
+            <h3 class="uk-card-title">Login</h3>
+        </div>
+        <div class="uk-card-body">
+            <form class="uk-form-stacked" action="/login" method="post">
+                @csrf
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="email">Email:</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input  @error('email') is-invalid @enderror" type="email" id="email" placeholder="Enter your email" name="email">
+                        @error('email')
+                            <div class="invalid-feedback">
+                            {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="password">Password:</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" type="password" id="password" placeholder="Enter your password" name="password">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <button class="uk-button uk-button-primary" type="submit">Login</button>
+                </div>
+            </form>
+            <a href="/auth/google" class="">Tombol Gugel</a>
+            <small class="">You don't have account? <a href="/register">Click here!</a></small>
+        </div>
+    </div>
+</div>
+
+
+@endsection
+<!-- <div class="row justify-content-center">
     <div class="col-md-4">
 
       @if(session()->has('success'))
@@ -42,7 +79,4 @@
           <small class="d-block text-center mt-3">You don't have account? <a href="/register">Click here!</a></small>
         </main>
     </div>
-</div>
-
-
-@endsection
+</div> -->

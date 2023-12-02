@@ -4,46 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NoLife Store</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">NoLife Store</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/">Home</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Gaming Gears
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Mouse</a></li>
-            <li><a class="dropdown-item" href="#">Keyboard</a></li>
-            <li><a class="dropdown-item" href="#">Headset</a></li>
-            <li><a class="dropdown-item" href="#">Earphone</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            PC Component
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Proccesor</a></li>
-            <li><a class="dropdown-item" href="#">VGA</a></li>
-            <li><a class="dropdown-item" href="#">Power Supply</a></li>
-            <li><a class="dropdown-item" href="#">Cooler</a></li>
-            <li><a class="dropdown-item" href="#">Motherboard</a></li>
-            <li><a class="dropdown-item" href="#">Memory Storage</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="navbar-nav ms-auto">  
+<nav class="uk-navbar-container">
+    <div class="uk-container">
+        <div uk-navbar>
+
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="/">NoLife Store</a></li>
+                    <li>
+                        <a href="#">Parent</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-active"><a href="#">Active</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Item</a></li>
+                  </ul>
+            </div>
+
+            <div class="uk-navbar-right">
+            @auth
+                <form action="/logout" method="post">
+                    @csrf
+                    <button type="submit" class="uk-button uk-button-primary"><i class="bi bi-box-arrow-right"></i> Logout</button>
+                </form>
+            @else
+                <form action="/login" method="get">
+                    @csrf
+                    <ul class="uk-navbar-nav">
+                        <li><button type="submit" class="uk-button uk-button-primary">Login</button></li>
+                    </ul>
+                </form>
+            @endauth
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+    <div class="container">
+        @yield('container')
+    </div>
+ 
+</body>    
+<!-- <ul class="navbar-nav ms-auto">  
         @auth
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,16 +77,5 @@
             <a href="/login" class="btn btn-outline-light"><i class="bi bi-box-arrow-in-right"></i>Login</a>
           </li>
         @endauth
-      </ul>
-    </div>
-  </div>
-</nav>
-
-    <div class="container mt-4">
-        @yield('container')
-    </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
- 
-</body>    
+      </ul> -->
 </html>
