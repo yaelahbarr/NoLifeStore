@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<h1 class="uk-margin-xlarge-left">Selamat datang di NoLife Store</h1>
+<h1 class="uk-margin-xlarge-left">Welcome to NoLife Store</h1>
 
 <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
     <div class="uk-card-media-left uk-cover-container">
