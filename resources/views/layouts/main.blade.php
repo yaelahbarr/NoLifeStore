@@ -10,23 +10,23 @@
 </head>
 <body>
 <nav class="uk-navbar-container">
-    <div class="uk-container">
-        <div uk-navbar>
+    <div class="uk-container ">
+        <div uk-navbar >
 
             <div class="uk-navbar-left">
-                <ul class="uk-navbar-nav">
+                <ul class="uk-navbar-nav ">
                     <li class="uk-active"><a href="/">NoLife Store</a></li>
                     <li>
-                        <a href="#">Parent</a>
+                        <a href="#">PC COMPONENTS</a>
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li class="uk-active"><a href="#">Active</a></li>
-                                <li><a href="#">Item</a></li>
-                                <li><a href="#">Item</a></li>
+                                <li class="uk-active"><a href="#">VGA</a></li>
+                                <li><a href="#">Processor</a></li>
+                                <li><a href="#">RAM</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="#">Item</a></li>
+                    <li><a href="#">ACCESSORIES</a></li>
                   </ul>
             </div>
 
