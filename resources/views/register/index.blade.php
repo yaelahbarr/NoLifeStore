@@ -1,44 +1,50 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="row">
-    <div class="">
-        <main class="">
-        <h1 class="">Registration Form</h1>
-          <form action="/register" method="post">
-            @csrf
-            <input type="hidden" name="provider" value="local">
-            <div class="">
-              <input type="text" name="name" class="@error('name') is-invalid @enderror" id="name" placeholder="Name" required value="{{ old('name') }}">
-              <label for="name">Name</label>
-              @error('name')
-                <div class="">
-                  {{ $message }}
-                </div>
-              @enderror
-            </div>
-            <div class="">
-              <input type="email" name="email" class="@error('email') is-invalid @enderror" id="email" placeholder="name@example.com" required value="{{ old('email') }}">
-              <label for="email">Email address</label>
-              @error('email')
-                <div class="">
-                  {{ $message }}
-                </div>
-              @enderror
-            </div>
-            <div class="">
-              <input type="password" name="password" class="@error('password') is-invalid @enderror" id="password" placeholder="Password" required>
-              <label for="password">Password</label>
-              @error('password')
-                <div class="">
-                  {{ $message }}
-                </div>
-              @enderror
-            </div>
-            <button class="" type="submit">Register</button>
+
+<div class="uk-container uk-margin-large-top ">
+  <div class="uk-card uk-card-default uk-width-1-2@m uk-margin-auto ">
+      <div class="uk-card-header">
+          <h3 class="uk-card-title">Register</h3>
+      </div>
+      <div class="uk-card-body">
+          <form class="uk-form-stacked" action="/login" method="post">
+              @csrf
+              <div class="uk-margin">
+                  <label class="uk-form-label" for="username">Username:</label>
+                  <div class="uk-form-controls">
+                      <input class="uk-input  @error('username') is-invalid @enderror" type="username" id="username" placeholder="Enter your username" name="username">
+                      @error('username')
+                          <div class="invalid-feedback">
+                          {{ $message }}
+                          </div>
+                      @enderror
+                  </div>
+              </div>
+              <div class="uk-margin">
+                  <label class="uk-form-label" for="email">Email:</label>
+                  <div class="uk-form-controls">
+                      <input class="uk-input  @error('email') is-invalid @enderror" type="email" id="email" placeholder="Enter your email" name="email">
+                      @error('email')
+                          <div class="invalid-feedback">
+                          {{ $message }}
+                          </div>
+                      @enderror
+                  </div>
+              </div>
+              <div class="uk-margin">
+                  <label class="uk-form-label" for="password">Password:</label>
+                  <div class="uk-form-controls">
+                      <input class="uk-input" type="password" id="password" placeholder="Enter your password" name="password">
+                  </div>
+              </div>
+              <div class="uk-margin">
+                  <button class="uk-button uk-button-primary" type="submit">Register</button>
+              </div>
           </form>
-          <small class="">Already have account? <a href="/login">Click here</a></small>
-        </main>
-    </div>
-</div>
+          <small class="">You have account? <a href="/login">Login here!</a></small>
+      </div>
+  </div>
+</div> 
+
 @endsection
