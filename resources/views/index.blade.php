@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoLife Store</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/css/uikit.min.css" />
+
 </head>
 <body>
     <nav class="bg-gray-800">
@@ -42,30 +45,36 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
                 </svg>
               </button>
-              <div class="relative ml-3">
-                <div>
-                  <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                      <span class="absolute -inset-1.5"></span>
-                      <span class="sr-only">Open user menu</span>
-                    <img class="h-8 w-8 rounded-full" src="/img/Nophoto.png" alt="">
-                  </button>
+              <div class="uk-navbar-right">
+
+<!-- ... Bagian Login & Logout ... -->
+@auth
+  <form action="/logout" method="post">
+    @csrf
+    <button type="submit" class="uk-button uk-button-primary">
+      <i class="bi bi-box-arrow-right"></i> Logout
+    </button>
+  </form>
+@else
+  <form action="/login" method="get">
+    @csrf
+    <ul class="uk-navbar-nav">
+      <li>
+        <button type="submit" class="uk-button uk-button-primary">
+          <i class="bi bi-box-arrow-in-right"></i> Login
+        </button>
+      </li>
+    </ul>
+  </form>
+@endauth
                 </div>
-                
-                <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                    <!-- Active: "bg-gray-100", Not Active: "" -->
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>     
+              
         <div class="sm:hidden" id="mobile-menu">
           <div class="space-y-1 px-2 pb-3 pt-2">
           </div>
         </div>
       </nav>
-  <!-- component -->
+  <!-- Slider -->
 <div class="h-screen w-full overflow-hidden flex flex-nowrap text-center" id="slider">
     <div class="bg-blue-600 text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
         <img src="/img/Gambar1.jpg" alt="" class="h-full w-full object-cover object-center">
@@ -122,44 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl " data-aos="fade-right">PC COMPONENTS</h2>
         <p class="mt-6 text-lg leading-8 text-gray-600" data-aos="fade-right">PC COMPONENTS atau Komponen PC adalah elemen perangkat keras individual yang membentuk komputer pribadi (PC). Komponen-komponen ini bekerja bersama untuk memungkinkan komputer melakukan berbagai tugas dan fungsi. </p>
       </div>
-      {{-- <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
-        <li>
-          <div class="flex items-center gap-x-6">
-            <img class="h-16 w-16 rounded-full" src="/img/Nophoto.png" alt="">
-            <div>
-              <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Barra Alkhasyani Permana</h3>
-              <p class="text-sm font-semibold leading-6 text-indigo-600">Ketua | Backend Dev</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="flex items-center gap-x-6">
-            <img class="h-16 w-16 rounded-full" src="/img/Nophoto.png" alt="">
-            <div>
-              <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Adnan Rais Purnomo</h3>
-              <p class="text-sm font-semibold leading-6 text-indigo-600">Anggota | Backend Dev</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="flex items-center gap-x-6">
-            <img class="h-16 w-16 rounded-full" src="/img/Nophoto.png" alt="">
-            <div>
-              <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Faqih Firdaus Kemal Pangestu</h3>
-              <p class="text-sm font-semibold leading-6 text-indigo-600">Anggota | Frontend Dev</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="flex items-center gap-x-6">
-            <img class="h-16 w-16 rounded-full" src="/img/Nophoto.png" alt="">
-            <div>
-              <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Dios Ahmad Fadhilah</h3>
-              <p class="text-sm font-semibold leading-6 text-indigo-600">Anggota | Frontend Dev</p>
-            </div>
-          </div>
-        </li>
-      </ul> --}}
     </div>
   </div>
   <div class="relative overflow-hidden bg-white">
@@ -171,35 +142,35 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div>
           <div class="mt-10">
-            <!-- Decorative image grid -->
+            <!-- image grid -->
             <div aria-hidden="true" class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
               <div class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
                 <div class="flex items-center space-x-6 lg:space-x-8">
                   <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                     <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                      <img src="/img/VGA1.jpg" alt="" class="h-full w-full object-cover object-center">
+                      <img  data-aos="zoom-out" src="/img/VGA1.jpg" alt="" class="h-full w-full object-cover object-center">
                     </div>
                     <div class="h-64 w-44 overflow-hidden rounded-lg">
-                      <img src="/img/VGA2.jpg" alt="" class="h-full w-full object-cover object-center">
-                    </div>
-                  </div>
-                  <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                    <div class="h-64 w-44 overflow-hidden rounded-lg">
-                      <img src="/img/VGA3.jpg" alt="" class="h-full w-full object-cover object-center">
-                    </div>
-                    <div class="h-64 w-44 overflow-hidden rounded-lg">
-                      <img src="/img/VGA4.jpg" alt="" class="h-full w-full object-cover object-center">
-                    </div>
-                    <div class="h-64 w-44 overflow-hidden rounded-lg">
-                      <img src="/img/VGA5.jpg" alt="" class="h-full w-full object-cover object-center">
+                      <img  data-aos="zoom-out" src="/img/VGA2.jpg" alt="" class="h-full w-full object-cover object-center">
                     </div>
                   </div>
                   <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                     <div class="h-64 w-44 overflow-hidden rounded-lg">
-                      <img src="/img/VGA6.jpg" alt="" class="h-full w-full object-cover object-center">
+                      <img  data-aos="zoom-out" src="/img/VGA3.jpg" alt="" class="h-full w-full object-cover object-center">
                     </div>
                     <div class="h-64 w-44 overflow-hidden rounded-lg">
-                      <img src="/img/VGA7.jpg" alt="" class="h-full w-full object-cover object-center">
+                      <img  data-aos="zoom-out" src="/img/VGA4.jpg" alt="" class="h-full w-full object-cover object-center">
+                    </div>
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img  data-aos="zoom-out" src="/img/VGA5.jpg" alt="" class="h-full w-full object-cover object-center">
+                    </div>
+                  </div>
+                  <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img  data-aos="zoom-out" src="/img/VGA6.jpg" alt="" class="h-full w-full object-cover object-center">
+                    </div>
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img  data-aos="zoom-out" src="/img/VGA7.jpg" alt="" class="h-full w-full object-cover object-center">
                     </div>
                   </div>
                 </div>
@@ -250,9 +221,115 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
   </div>
+  <!-- Footer -->
+<div class="flex items-end w-full min-h-screen bg-white">
+
+  <footer class="w-full text-gray-700 bg-gray-100 body-font">
+      <div
+          class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
+          <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+              <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
+                  <h1>NoLifeStore</h1>
+              </a>
+              <p class="mt-2 text-sm text-gray-500">Media Sosial E-commece</p>
+              <div class="mt-4">
+                  <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
+                      <a class="text-gray-500 cursor-pointer hover:text-gray-700">
+                          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              class="w-5 h-5" viewBox="0 0 24 24">
+                              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                          </svg>
+                      </a>
+                      <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              class="w-5 h-5" viewBox="0 0 24 24">
+                              <path
+                                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                              </path>
+                          </svg>
+                      </a>
+                      <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                          </svg>
+                      </a>
+                  </span>
+              </div>
+          </div>
+          <div class="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                  <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">About</h2>
+                  <nav class="mb-10 list-none">
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Company</a>
+                      </li>
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Careers</a>
+                      </li>
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Blog</a>
+                      </li>
+                  </nav>
+              </div>
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                  <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Support</h2>
+                  <nav class="mb-10 list-none">
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Contact Support</a>
+                      </li>
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Help Resources</a>
+                      </li>
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Release Updates</a>
+                      </li>
+                  </nav>
+              </div>
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                  <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Platform
+                  </h2>
+                  <nav class="mb-10 list-none">
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Terms &amp; Privacy</a>
+                      </li>
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Pricing</a>
+                      </li>
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">FAQ</a>
+                      </li>
+                  </nav>
+              </div>
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                  <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Contact</h2>
+                  <nav class="mb-10 list-none">
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Send a Message</a>
+                      </li>
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Request a Quote</a>
+                      </li>
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">+62838906478</a>
+                      </li>
+                  </nav>
+              </div>
+          </div>
+      </div>
+      <div class="bg-gray-300">
+          <div class="container px-5 py-4 mx-auto">
+              <p class="text-sm text-gray-700 capitalize xl:text-center">© 2023 | <a href="https://github.com/yaelahbarr/NoLifeStore">By : NoLifeStore</a></p>
+          </div>
+      </div>
+  </footer>
+</div>
+</body>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
   <script>
     AOS.init();
   </script>
-</body>
 </html>
