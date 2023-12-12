@@ -26,5 +26,8 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('12345'),
             'provider' => 'local'
         ]);
+
+        // tambah data province dan cities dari API RajaOngkir 
+        $this->call(LocationsTableSeeder::class);
     }
 }
