@@ -24,13 +24,14 @@ class GoogleAuthController extends Controller
                     'name' => $googleUser->getName(),
                     'email' => $googleUser->getEmail(),
                     'provider' => 'google',
-                    'provider_id' => $googleUser->getId()
+                    'provider_id' => $googleUser->getId(),
+                    'role' => 'user',
                 ]);
                 Auth::login($new_user);
-                return redirect()->intended('dashboard');
+                return redirect()->intended('/');
             } else{
                 Auth::login($user);
-                return redirect()->intended('dashboard');
+                return redirect()->intended('/');
             }
 
         } catch (\Exception $e) {

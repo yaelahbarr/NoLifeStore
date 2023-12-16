@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_product');
             $table->foreign('id_product')->references('id_product')->on('products');
             $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id_user')->on('users');
+            $table->foreign('id_user')->references('id')->on('users');
             $table->unsignedBigInteger('id_order');
             $table->foreign('id_order')->references('id_order')->on('orders');
             $table->unsignedBigInteger('total_order');

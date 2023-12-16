@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('user.layouts.layouts')
 
 @section('container')
 
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="uk-margin">
-                    <button class="uk-button uk-button-primary" type="submit">Login</button>
+                    <button class="uk-button uk-button-primary">Login</button>
                 </div>
             </form>
             <a href="/auth/google" class="">Tombol Gugel</a>

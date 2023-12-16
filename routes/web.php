@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GoogleAuthController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,15 +18,27 @@ use App\Http\Controllers\GoogleAuthController;
 |
 */
 
+Route::get('/pc-components', [CategoryController::class, 'pcComponents']);
+
 Route::get('/', function () {
-    return view('index');
+    return view('user.index');
 });
 
-// Buat yang login admin
+Route::post('/logout', [LoginController::class, 'logout']);
+
+// Buat yang login user
 Route::group(['middleware'=>'auth'], function(){
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/home', function () {
+        // return view('index');
+        return 'ini user';
+    });
     
-    Route::post('/logout', [LoginController::class, 'logout']);
+});
+
+// Buat login admin
+Route::group(['middleware' => 'isAdmin'], function() {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
 });
 
 // Buat yang belum login
@@ -48,3 +61,4 @@ Route::group(['middleware'=>'guest'], function(){
     Route::get('/auth/google/callback', [GoogleAuthController::class, 'callbackGoogle']);
 
 });
+

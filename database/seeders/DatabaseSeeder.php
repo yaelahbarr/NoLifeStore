@@ -21,10 +21,11 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         User::create([
-            'name' => 'User Dummy',
-            'email' => 'userdumb@gmail.com',
-            'password' => bcrypt('12345'),
-            'provider' => 'local'
+            'name' => 'NoLife Admin',
+            'email' => 'nolifestore@gmail.com',
+            'password' => bcrypt('nolifestore'),
+            'provider' => 'local',
+            'role' => 'admin'
         ]);
 
         // tambah data province dan cities dari API RajaOngkir 

@@ -61,10 +61,13 @@
                 <i class="fas fa-user"></i>
                 <span>Profile</span>
             </a>
-            <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-500 group">
-                <i class="fas fa-sign-out-alt"></i>
-                <span>Logout</span>
-            </a>
+            <form action="/logout" method="post">
+                @csrf
+                    <button type="submit" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-500 group">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </button>
+            </form>
         </div>
     </div>
 
