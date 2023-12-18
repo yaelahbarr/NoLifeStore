@@ -2,9 +2,10 @@
 
 @section('container')
 <!-- Slider -->
-<div class="h-screen w-full overflow-hidden flex flex-nowrap text-center" id="slider">
+
+<div class="h-full w-full overflow-hidden flex flex-nowrap " id="slider">
     <div class="bg-blue-600 text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
-        <img src="/img/banner1.jpg" alt="" class="h-full w-full object-cover object-center">
+        <img src="/img/banner1.jpg" alt="" class="h-full w-full object-cover object-center ">
     </div>
     <div class="bg-pink-400 text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
         <img src="/img/banner2.jpg" alt="" class="h-full w-full object-cover object-center">
@@ -14,6 +15,24 @@
     </div>
     <div class="bg-teal-500 text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
         <img src="/img/banner4.jpg" alt="" class="h-full w-full object-cover object-center">
+    </div>
+    <div class="bg-teal-500 text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+        <img src="/img/banner5.jpg" alt="" class="h-full w-full object-cover object-center">
+    </div>
+    <div class="bg-teal-500 text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+        <img src="/img/banner6.jpg" alt="" class="h-full w-full object-cover object-center">
+    </div>
+    <div class="bg-teal-500 text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+        <img src="/img/banner7.jpg" alt="" class="h-full w-full object-cover object-center">
+    </div>
+    <div class="bg-teal-500 text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+        <img src="/img/banner8.jpg" alt="" class="h-full w-full object-cover object-center">
+    </div>
+    <div class="bg-teal-500 text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+        <img src="/img/banner9.jpg" alt="" class="h-full w-full object-cover object-center">
+    </div>
+    <div class="bg-teal-500 text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+        <img src="/img/banner10.jpg" alt="" class="h-full w-full object-cover object-center">
     </div>
 </div>
 <script>
@@ -34,66 +53,105 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 </script>
+
+ <!-- More products... -->
   <div class="text-center mx-auto mt-8">
-    <h2 class="font-bold text-3xl text-gray-900" data-aos="fade-right">BE BETTER BE PROFESSIONAL</h2>
-    <p class="mt-6 text-lg leading-8 text-gray-600" data-aos="fade-right">It's not about skills, it's about equipment</p>
+    <h2 class="font-bold text-3xl text-gray-900" data-aos="fade-down">BE BETTER BE PROFESSIONAL</h2>
+    <p class="mt-6 text-lg leading-8 text-gray-600" data-aos="fade-down">It's not about skills, it's about equipment</p>
   </div>
-     
-  <div class="bg-white">
-    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-  
-      <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-        <a href="#" class="group">
-          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-            <img src="/IMG/bannervga.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
-          </div>
-          <h3 class="mt-4 text-sm text-gray-700 text-center font-bold">VGA</h3>
-        </a>
-        <a href="#" class="group">
-          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-            <img src="/img/bannerpsu.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
-          </div>
-          <h3 class="mt-4 text-sm text-gray-700 text-center font-bold">POWER SUPPLY</h3>
-        </a>
-        <a href="#" class="group">
-          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-            <img src="/img/bannerram.jpg" alt="Person using a pen to cross a task off a productivity paper card." class="h-full w-full object-cover object-center group-hover:opacity-75">
-          </div>
-          <h3 class="mt-4 text-sm text-gray-700 text-center font-bold">RAM</h3>
-        </a>
-        <a href="#" class="group">
-          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-            <img src="/img/bannermobo.jpeg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
-          </div>
-          <h3 class="mt-4 text-sm text-gray-700 text-center font-bold">MOTHERBOARD</h3>
-        </a>
-        <a href="#" class="group">
-          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-            <img src="/img/bannerheadset.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
-          </div>
-          <h3 class="mt-4 text-sm text-gray-700 text-center font-bold">HEADSET</h3>
-        </a>
-        <a href="#" class="group">
-          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-            <img src="/img/bannerkeyboard.png" alt="Person using a pen to cross a task off a productivity paper card." class="h-full w-full object-cover object-center group-hover:opacity-75">
-          </div>
-          <h3 class="mt-4 text-sm text-gray-700 text-center font-bold">KEYBOARD</h3>
-        </a>
-        <a href="#" class="group">
-          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-            <img src="/img/bannermouse.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
-          </div>
-          <h3 class="mt-4 text-sm text-gray-700 text-center font-bold">MOUSE</h3>
-        </a>
-        <a href="#" class="group">
-          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-            <img src="/img/bannerkursi.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
-          </div>
-          <h3 class="mt-4 text-sm text-gray-700 text-center font-bold">CHAIR</h3>
-        </a>
-      </div>
+
+<div class="bg-white">
+  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+      <a href="/img/bannervga.jpg" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
+          <img  data-aos="fade-down"  data-aos-duration="1000" src="/img/bannervga.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">VGA</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$15</p>
+      </a>
+      <a href="/img/bannerpsu.jpg" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
+          <img  data-aos="fade-down"  data-aos-duration="1000" src="/img/bannerpsu.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">POWER SUPPLY</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$20</p>
+      </a>
+      <a href="/img/bannerram.jpg" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
+          <img  data-aos="fade-down"  data-aos-duration="1000" src="/img/bannerram.jpg" alt="Person using a pen to cross a task off a productivity paper card." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">RAM</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$16</p>
+      </a>
+      <a href="/img/bannermobo.jpeg" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
+          <img data-aos="fade-down"  data-aos-duration="1000" src="/img/bannermobo.jpeg" alt="" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">MOTHERBOARD</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$27</p>
+      </a>
+      <a href="/img/bannerheadset.jpg" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
+          <img data-aos="fade-down"  data-aos-duration="1000" src="/img/bannerheadset.jpg" alt="" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">HEADSET</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$10</p>
+      </a>
+      <a href="/img/bannerkeyboard.png" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
+          <img data-aos="fade-down"  data-aos-duration="1000" src="/img/bannerkeyboard.png" alt="" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">KEYBOARD</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$13</p>
+      </a>
+      <a href="/img/bannermouse.jpg" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
+          <img data-aos="fade-down"  data-aos-duration="1000" src="/img/bannermouse.jpg" alt="" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">MOUSE</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$8</p>
+      </a>
+      <a href="/img/bannerkursi.jpg" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
+          <img data-aos="fade-down"  data-aos-duration="1000" src="/img/bannerkursi.jpg" alt="" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">CHAIR</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$9</p>
+      </a>
+      <a href="/img/SSD.jpg" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
+          <img data-aos="fade-down"  data-aos-duration="1000" src="/img/SSD.jpg" alt="" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">SOLID STATE DRIVE</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$21</p>
+      </a>
+      <a href="/img/HDD.jpg"  class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
+            <img data-aos="fade-down"  data-aos-duration="1000" src="/img/HDD.jpg" alt="" class="h-full w-full object-cover object-center">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">HARD DRIVE</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$18</p>
+    </a>    
+      <a href="/img/Intel.jpeg"  class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
+            <img data-aos="fade-down"  data-aos-duration="1000" src="/img/Intel.jpeg" alt="" class="h-full w-full object-cover object-center">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">INTEL</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$14</p>
+    </a>    
+    </a>    
+      <a href="/img/AMD.jpg"  class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
+            <img data-aos="fade-down" data-aos-duration="1000" src="/img/AMD.jpg" alt="" class="h-full w-full object-cover object-center">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">AMD</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$14</p>
+    </a>    
     </div>
   </div>
+</div>
+
 </div>
 
 @endsection
