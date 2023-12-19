@@ -17,7 +17,7 @@
                                 <div class="font-bold text-xl mb-2">{{ $kategori->category_name }}</div>
                             </div>
                             <div class="px-6 py-4">
-                                <button class="bg-blue-500 text-white px-4 py-2 rounded-md">Show more</button>
+                                <a href="{{ url('/category-products/' . $kategori->id_category) }}" class="bg-blue-500 text-white px-4 py-2 rounded-md">Show more</a>
                             </div>
                         </div>
                     </div>
