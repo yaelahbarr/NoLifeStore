@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('product_name');
             $table->unsignedBigInteger('price');
             $table->integer('stock');
+            $table->string('image');
             $table->timestamps();
         });
     }

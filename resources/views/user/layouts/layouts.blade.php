@@ -36,7 +36,7 @@
                     <div class="flex  space-x-4 space-y-0">
                         <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-blue rounded-md px-3 py-2 text-sm font-medium" aria-current="page">HOME</a>
                         <a href="/pc-components" class="text-gray-300 hover:bg-gray-700 hover:text-blue rounded-md px-3 py-2 text-sm font-medium">PC COMPONENTS</a>
-                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-blue rounded-md px-3 py-2 text-sm font-medium">GAMING GEARS</a>
+                        <a href="/gaming-gears" class="text-gray-300 hover:bg-gray-700 hover:text-blue rounded-md px-3 py-2 text-sm font-medium">GAMING GEARS</a>
                     </div>
                 </div>
             </div>

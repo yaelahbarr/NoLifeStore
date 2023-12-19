@@ -19,6 +19,7 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/pc-components', [CategoryController::class, 'pcComponents']);
+Route::get('/gaming-gears', [CategoryController::class, 'gamingGears']);
 
 Route::get('/', function () {
     return view('user.index');

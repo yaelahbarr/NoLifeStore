@@ -15,6 +15,13 @@ class CategoryController extends Controller
         ]);
     }
 
+    public function gamingGears() {    
+        $category = Category::where('type', 'gaming-gears')->get();
+        return view('user.category.categories', [
+            'categories' => $category
+        ]);
+    }
+
     public function show(category $category){
         $category = Category::where('category_name', $category)->first();
         

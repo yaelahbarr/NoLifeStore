@@ -30,5 +30,9 @@ class DatabaseSeeder extends Seeder
 
         // tambah data province dan cities dari API RajaOngkir 
         $this->call(LocationsTableSeeder::class);
+        
+        //seed category dan product
+        $this->call(CategoriesTableSeeder::class);
+        $this->call(ProductsTableSeeder::class);
     }
 }
