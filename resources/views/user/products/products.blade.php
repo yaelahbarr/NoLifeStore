@@ -11,6 +11,9 @@
                     <div class="font-bold text-xl mb-2">{{ $product->product_name }}</div>
                 </div>
                 <div class="px-6 py-4">
+                    <p>Rp {{ number_format($product->price) }}</p>
+                </div>
+                <div class="px-6 py-4">
                     <a href="/products" class="bg-blue-500 text-white px-4 py-2 rounded-md">Buy</a>
                 </div>
             </div>

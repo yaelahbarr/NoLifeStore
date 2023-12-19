@@ -19,6 +19,9 @@ class CategoriesTableSeeder extends Seeder
             ['id_category' => 3, 'category_name' => 'Power Supply', 'type' => 'pc-components'],
             ['id_category' => 4, 'category_name' => 'RAM', 'type' => 'pc-components'],
             ['id_category' => 5, 'category_name' => 'Mouse', 'type' => 'gaming-gears'],
+            ['id_category' => 6, 'category_name' => 'Keyboard', 'type' => 'gaming-gears'],
+            ['id_category' => 7, 'category_name' => 'Headset', 'type' => 'gaming-gears'],
+            ['id_category' => 8, 'category_name' => 'Chair', 'type' => 'gaming-gears'],
         ]);
     }
 }
