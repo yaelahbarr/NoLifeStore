@@ -135,29 +135,7 @@
                     <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">About</h2>
                     <nav class="mb-10 list-none">
                         <li class="mt-3">
-                            <a class="text-gray-500 cursor-pointer hover:text-gray-900">Company</a>
-                        </li>
-                        <li class="mt-3">
-                            <a class="text-gray-500 cursor-pointer hover:text-gray-900">Careers</a>
-                        </li>
-                        <li class="mt-3">
                             <a class="text-gray-500 cursor-pointer hover:text-gray-900">Blog</a>
-                        </li>
-                    </nav>
-                </div>
-             
-                <div class="w-full px-4 lg:w-1/4 md:w-1/2">
-                    <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">SUPPORT
-                    </h2>
-                    <nav class="mb-10 list-none">
-                        <li class="mt-3">
-                            <a class="text-gray-500 cursor-pointer hover:text-gray-900">Terms &amp; Privacy</a>
-                        </li>
-                        <li class="mt-3">
-                            <a class="text-gray-500 cursor-pointer hover:text-gray-900">Pricing</a>
-                        </li>
-                        <li class="mt-3">
-                            <a class="text-gray-500 cursor-pointer hover:text-gray-900">FAQ</a>
                         </li>
                     </nav>
                 </div>
