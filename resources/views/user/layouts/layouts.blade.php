@@ -42,12 +42,10 @@
             </div>
 
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                <span class="absolute -inset-1.5"></span>
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
-                    </svg>
-                </button>
+                <button>
+                    <i class="fas fa-shopping-cart  text-lg"></i>
+                </button>
+            </div>
 
             <!-- ... Bagian Login & Logout ... -->
             <div class="uk-navbar-right text-gray-300 hover:bg-gray-700 hover:text-blue rounded px-3 py-2 text-sm font-medium">
@@ -135,29 +133,7 @@
                     <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">About</h2>
                     <nav class="mb-10 list-none">
                         <li class="mt-3">
-                            <a class="text-gray-500 cursor-pointer hover:text-gray-900">Company</a>
-                        </li>
-                        <li class="mt-3">
-                            <a class="text-gray-500 cursor-pointer hover:text-gray-900">Careers</a>
-                        </li>
-                        <li class="mt-3">
                             <a class="text-gray-500 cursor-pointer hover:text-gray-900">Blog</a>
-                        </li>
-                    </nav>
-                </div>
-             
-                <div class="w-full px-4 lg:w-1/4 md:w-1/2">
-                    <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">SUPPORT
-                    </h2>
-                    <nav class="mb-10 list-none">
-                        <li class="mt-3">
-                            <a class="text-gray-500 cursor-pointer hover:text-gray-900">Terms &amp; Privacy</a>
-                        </li>
-                        <li class="mt-3">
-                            <a class="text-gray-500 cursor-pointer hover:text-gray-900">Pricing</a>
-                        </li>
-                        <li class="mt-3">
-                            <a class="text-gray-500 cursor-pointer hover:text-gray-900">FAQ</a>
                         </li>
                     </nav>
                 </div>

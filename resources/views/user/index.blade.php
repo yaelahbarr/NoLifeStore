@@ -62,91 +62,80 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <div class="bg-white">
   <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-    <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+    <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 text-center">
       <a href="/img/bannervga.jpg" class="group">
         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
           <img  data-aos="fade-down"  data-aos-duration="1000" src="/img/bannervga.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
         </div>
-        <h3 class="mt-4 text-sm text-gray-700">VGA</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$15</p>
+        <h3 class="mt-1 text-lg font-medium text-gray-900">VGA</h3>
+
       </a>
       <a href="/img/bannerpsu.jpg" class="group">
         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
           <img  data-aos="fade-down"  data-aos-duration="1000" src="/img/bannerpsu.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
         </div>
-        <h3 class="mt-4 text-sm text-gray-700">POWER SUPPLY</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$20</p>
+        <h3 class="mt-1 text-lg font-medium text-gray-900">POWER SUPPLY</h3>
       </a>
       <a href="/img/bannerram.jpg" class="group">
         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
           <img  data-aos="fade-down"  data-aos-duration="1000" src="/img/bannerram.jpg" alt="Person using a pen to cross a task off a productivity paper card." class="h-full w-full object-cover object-center group-hover:opacity-75">
         </div>
-        <h3 class="mt-4 text-sm text-gray-700">RAM</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$16</p>
+        <h3 class="mt-1 text-lg font-medium text-gray-900">RAM</h3>
       </a>
       <a href="/img/bannermobo.jpeg" class="group">
         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
           <img data-aos="fade-down"  data-aos-duration="1000" src="/img/bannermobo.jpeg" alt="" class="h-full w-full object-cover object-center group-hover:opacity-75">
         </div>
-        <h3 class="mt-4 text-sm text-gray-700">MOTHERBOARD</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$27</p>
+        <h3 class="mt-1 text-lg font-medium text-gray-900">MOTHERBOARD</h3>
       </a>
       <a href="/img/bannerheadset.jpg" class="group">
         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
           <img data-aos="fade-down"  data-aos-duration="1000" src="/img/bannerheadset.jpg" alt="" class="h-full w-full object-cover object-center group-hover:opacity-75">
         </div>
-        <h3 class="mt-4 text-sm text-gray-700">HEADSET</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$10</p>
+        <h3 class="mt-1 text-lg font-medium text-gray-900">HEADSET</h3>
       </a>
       <a href="/img/bannerkeyboard.png" class="group">
         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
           <img data-aos="fade-down"  data-aos-duration="1000" src="/img/bannerkeyboard.png" alt="" class="h-full w-full object-cover object-center group-hover:opacity-75">
         </div>
-        <h3 class="mt-4 text-sm text-gray-700">KEYBOARD</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$13</p>
+        <h3 class="mt-1 text-lg font-medium text-gray-900">KEYBOARD</h3>
       </a>
       <a href="/img/bannermouse.jpg" class="group">
         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
           <img data-aos="fade-down"  data-aos-duration="1000" src="/img/bannermouse.jpg" alt="" class="h-full w-full object-cover object-center group-hover:opacity-75">
         </div>
-        <h3 class="mt-4 text-sm text-gray-700">MOUSE</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$8</p>
+        <h3 class="mt-1 text-lg font-medium text-gray-900">MOUSE</h3>
       </a>
       <a href="/img/bannerkursi.jpg" class="group">
         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
           <img data-aos="fade-down"  data-aos-duration="1000" src="/img/bannerkursi.jpg" alt="" class="h-full w-full object-cover object-center group-hover:opacity-75">
         </div>
-        <h3 class="mt-4 text-sm text-gray-700">CHAIR</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$9</p>
+        <h3 class="mt-1 text-lg font-medium text-gray-900">CHAIR</h3>
       </a>
       <a href="/img/SSD.jpg" class="group">
         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
           <img data-aos="fade-down"  data-aos-duration="1000" src="/img/SSD.jpg" alt="" class="h-full w-full object-cover object-center group-hover:opacity-75">
         </div>
-        <h3 class="mt-4 text-sm text-gray-700">SOLID STATE DRIVE</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$21</p>
+        <h3 class="mt-1 text-lg font-medium text-gray-900">SOLID STATE DRIVE</h3>
       </a>
       <a href="/img/HDD.jpg"  class="group">
         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
             <img data-aos="fade-down"  data-aos-duration="1000" src="/img/HDD.jpg" alt="" class="h-full w-full object-cover object-center">
         </div>
-        <h3 class="mt-4 text-sm text-gray-700">HARD DRIVE</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$18</p>
+        <h3 class="mt-1 text-lg font-medium text-gray-900">HARD DRIVE</h3>
     </a>    
       <a href="/img/Intel.jpeg"  class="group">
         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
             <img data-aos="fade-down"  data-aos-duration="1000" src="/img/Intel.jpeg" alt="" class="h-full w-full object-cover object-center">
         </div>
-        <h3 class="mt-4 text-sm text-gray-700">INTEL</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$14</p>
+        <h3 class="mt-1 text-lg font-medium text-gray-900">INTEL</h3>
     </a>    
     </a>    
       <a href="/img/AMD.jpg"  class="group">
         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
             <img data-aos="fade-down" data-aos-duration="1000" src="/img/AMD.jpg" alt="" class="h-full w-full object-cover object-center">
         </div>
-        <h3 class="mt-4 text-sm text-gray-700">AMD</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$14</p>
+        <h3 class="mt-1 text-lg font-medium text-gray-900">AMD</h3>
     </a>    
     </div>
   </div>
