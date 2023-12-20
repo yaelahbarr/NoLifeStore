@@ -20,15 +20,7 @@
 
             <div class="space-x-4">
                 <button>
-                    <i class="fas fa-shopping-cart  text-lg"></i>
-                </button>
-
-                <button>
                     <i class="fas fa-bell text-lg"></i>
-                </button>
-                
-                <button>
-                    <i class="fas fa-user text-lg"></i>
                 </button>
             
             </div>
@@ -57,10 +49,6 @@
                 <i class="fab fa-amazon-pay"></i>
                 <span>Payment</span>
             </a>
-            <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-500 group">
-                <i class="fas fa-user"></i>
-                <span>Profile</span>
-            </a>
             <form action="/logout" method="post">
                 @csrf
                     <button type="submit" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-500 group">
@@ -72,14 +60,6 @@
     </div>
 
     <div class="lg:ml-64 lg:pl-4 lg:flex lg:flex-col lg:w-75% mt-5 mx-10">
-
-        <!-- Search -->
-        <div class="bg-white rounded-full border-none p-3 mb-4 shadow-md">
-            <div class="flex items-center">
-                <i class="px-3 fas fa-search ml-1"></i>
-                <input type="text" placeholder="Search..." class="ml-3 focus:outline-none w-full">
-            </div>
-        </div>
           <!-- Dashboard Content -->
         <div class="bg-white p-6 rounded-lg border border-gray-200 mb-4 shadow-md">
             <h2 class="text-xl font-semibold mb-4">Dashboard Overview</h2>
