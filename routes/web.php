@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\StockController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
@@ -41,6 +44,9 @@ Route::group(['middleware'=>'auth'], function(){
 // Buat login admin
 Route::group(['middleware' => 'isAdmin'], function() {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('/customer', CustomerController::class);
+    Route::resource('/stock', StockController::class);
+    Route::resource('/order', OrderController::class);
 
 });
 
