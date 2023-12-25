@@ -31,7 +31,7 @@
         <!-- Items -->
         <div class="p-4 space-y-4">
             <!-- Inicio -->
-            <a href="#" aria-label="dashboard"
+            <a href="/dashboard" aria-label="dashboard"
                 class="relative px-7 py-3 flex items-center space-x-4 rounded-lg  bg-gradient-to-r from-sky-600 to-cyan-400">
                 <i class="fas fa-home text-white"></i>
                 <span class="-mr-1 font-medium">Dashboard</span>

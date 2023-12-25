@@ -50,13 +50,25 @@
             <!-- ... Bagian Login & Logout ... -->
             <div class="uk-navbar-right text-gray-300 hover:bg-gray-700 hover:text-blue rounded px-3 py-2 text-sm font-medium">
                 @auth
-                <form action="/logout" method="post">
-                    @csrf
-                    <button type="submit" class="uk-button uk-button-primary rounded">
-                    <i class="fas fa-user text-lg"></i>
-                    <i class="bi bi-box-arrow-right"></i> Logout
+                <div x-data="{ open: false }" @click.away="open = false" class="relative">
+                    <button @click="open = !open" class="text-white focus:outline-none">
+                        Welcome {{ auth()->user()->name }}
                     </button>
-                </form>
+                    <!-- Daftar Dropdown -->
+                    <div x-show="open" class="absolute mt-2 bg-gray-800 text-white rounded-md shadow-lg">
+                        <a href="#" class="block px-4 py-2">Your Order</a>
+                        <a href="#" class="block px-4 py-2">
+                            <form action="/logout" method="post">
+                                @csrf
+                                <button type="submit" class="uk-button uk-button-primary rounded">
+                                    <i class="fas fa-user text-lg"></i>
+                                    <i class="bi bi-box-arrow-right"></i> Logout
+                                </button>
+                            </form>
+                        </a>
+                    </div>
+                </div>
+                                
                 @else
                 <form action="/login" method="get">
                     @csrf
@@ -168,11 +180,13 @@
 
 </div>
 </div>
-</body>    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
     <script>
         AOS.init();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+
+</body>    
 </html>
