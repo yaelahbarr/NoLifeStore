@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
 
 class StockController extends Controller
 {
@@ -20,7 +21,7 @@ class StockController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.stock.create', ['category' => Category::all()]);
     }
 
     /**
@@ -28,7 +29,19 @@ class StockController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'id_category' => 'required',
+            'product_name' => 'required',
+            'price' => 'required',
+            'stock' => 'required',
+            'image' => 'image|file|max:1024'
+        ]);
+
+        // $imagePath = $request->file('image')->store('public/images');
+        // $validatedData['image'] = $imagePath;
+        // $product = Product::create($validatedData);
+
+        var_dump ($validatedData);
     }
 
     /**

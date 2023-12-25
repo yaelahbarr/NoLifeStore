@@ -1,7 +1,7 @@
 @extends('admin.layouts.main')
 
 @section('container')
-<button>Add Stock</button>
+<a href="/stock/create">Add Stock</a>
 <table class="min-w-full divide-y divide-gray-200">
     <thead>
         <tr>
