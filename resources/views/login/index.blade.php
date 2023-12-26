@@ -28,7 +28,6 @@
                     </div>
                 </div>
                 <div class="uk-margin">
-                    <br>
                     <button class="uk-button uk-button-primary"><i class="fa-solid fa-right-to-bracket"></i></button>
                 </div>
             </form>
@@ -36,8 +35,8 @@
     <span class="uk-margin-small-right" style="font-size: 1rem;">or login with</span>
     <i class="fa-brands fa-google" style="font-size: 1rem;"></i>
 </a>
-<br> <!-- Baris baru ditambahkan di sini -->
-<small style="font-size: 1rem;">You don't have an account? <a href="/register">Reg here!</a></small>
+<br>
+<small style="font-size: 1rem;">You don't have an account? <a href="/register">Register here!</a></small>
 
         </div>
     </div>
