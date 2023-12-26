@@ -28,11 +28,17 @@
                     </div>
                 </div>
                 <div class="uk-margin">
-                    <button class="uk-button uk-button-primary">Login</button>
+                    <br>
+                    <button class="uk-button uk-button-primary"><i class="fa-solid fa-right-to-bracket"></i></button>
                 </div>
             </form>
-            <a href="/auth/google" class="">Tombol Gugel</a>
-            <small class="">You don't have account? <a href="/register">Click here!</a></small>
+            <a href="/auth/google" class="">
+    <span class="uk-margin-small-right" style="font-size: 1rem;">or login with</span>
+    <i class="fa-brands fa-google" style="font-size: 1rem;"></i>
+</a>
+<br> <!-- Baris baru ditambahkan di sini -->
+<small style="font-size: 1rem;">You don't have an account? <a href="/register">Reg here!</a></small>
+
         </div>
     </div>
 </div>
