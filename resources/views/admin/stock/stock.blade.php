@@ -23,7 +23,7 @@
                 <td class="px-6 py-4 whitespace-no-wrap">{{ $s->stock }}</td>
                 <td class="px-6 py-4 whitespace-no-wrap"><img src="ProductImage/{{ $s->image }}" width="100px" alt=""></td>
                 <td class="px-6 py-4 whitespace-no-wrap">
-                    <button>edit</button>
+                    <a href="{{ route('stock.edit', $s->id_product) }}">Edit</a>
                     <button>delete</button>
                 </td>
                 <!-- Tambahkan kolom sesuai kebutuhan Anda -->
