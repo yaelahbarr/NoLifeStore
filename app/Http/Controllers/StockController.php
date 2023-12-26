@@ -29,19 +29,20 @@ class StockController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'id_category' => 'required',
-            'product_name' => 'required',
-            'price' => 'required',
-            'stock' => 'required',
-            'image' => 'image|file|max:1024'
-        ]);
+        $stock = new Product;
+        $stock->id_category=$request->id_category;
+        $stock->product_name=$request->product_name;
+        $stock->price=$request->price;
+        $stock->stock=$request->stock;
+        
+        $image = $request->image;
+        $imageName = time().'.'.
+        $image->extension();
+        $request->image->move(public_path().'/ProductImage', $imageName);
+        $stock->image = $imageName;
+        $stock->save();
 
-        // $imagePath = $request->file('image')->store('public/images');
-        // $validatedData['image'] = $imagePath;
-        // $product = Product::create($validatedData);
-
-        var_dump ($validatedData);
+        return redirect('/stock');
     }
 
     /**

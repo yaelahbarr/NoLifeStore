@@ -10,7 +10,7 @@
             <!-- Kategori -->
             <div class="mb-4">
                 <label for="category" class="block text-sm font-medium text-gray-700">Category</label>
-                <select name="category" id="category" class="mt-1 block w-full border-gray-300 rounded-md focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <select name="id_category" id="category" class="mt-1 block w-full border-gray-300 rounded-md focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                     @foreach ($category as $c)
                     <option value="{{ $c->id_category }}">{{ $c->category_name }}</option>
                     @endforeach

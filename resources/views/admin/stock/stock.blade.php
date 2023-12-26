@@ -21,7 +21,7 @@
                 <td class="px-6 py-4 whitespace-no-wrap">Rp. {{ number_format($s->price) }}</td>
                 <td class="px-6 py-4 whitespace-no-wrap">{{ $s->category->category_name }}</td>
                 <td class="px-6 py-4 whitespace-no-wrap">{{ $s->stock }}</td>
-                <td class="px-6 py-4 whitespace-no-wrap"><img src="{{ $s->image }}" width="100px" alt=""></td>
+                <td class="px-6 py-4 whitespace-no-wrap"><img src="ProductImage/{{ $s->image }}" width="100px" alt=""></td>
                 <td class="px-6 py-4 whitespace-no-wrap">
                     <button>edit</button>
                     <button>delete</button>
