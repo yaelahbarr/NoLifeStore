@@ -24,7 +24,13 @@
                 <td class="px-6 py-4 whitespace-no-wrap"><img src="ProductImage/{{ $s->image }}" width="100px" alt=""></td>
                 <td class="px-6 py-4 whitespace-no-wrap">
                     <a href="{{ route('stock.edit', $s->id_product) }}">Edit</a>
-                    <button>delete</button>
+                    <form action="{{route('stock.destroy',$s->id_product)}}" method="post">
+                            @csrf
+                            @method('delete')
+                            <button type="submit">
+                                delete
+                            </button>
+                        </form>
                 </td>
                 <!-- Tambahkan kolom sesuai kebutuhan Anda -->
             </tr>
