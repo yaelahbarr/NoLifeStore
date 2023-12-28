@@ -11,6 +11,7 @@
           <form class="uk-form-stacked" action="/register" method="post">
               @csrf
               <input type="hidden" name="provider" value="local">
+              <input type="hidden" name="role" value="user">
               <div class="uk-margin">
                   <label class="uk-form-label" for="name">Name:</label>
                   <div class="uk-form-controls">

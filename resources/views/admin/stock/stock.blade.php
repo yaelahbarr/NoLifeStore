@@ -24,17 +24,29 @@
                 <td class="px-6 py-4 whitespace-no-wrap"><img src="ProductImage/{{ $s->image }}" width="100px" alt=""></td>
                 <td class="px-6 py-4 whitespace-no-wrap">
                     <a href="{{ route('stock.edit', $s->id_product) }}">Edit</a>
-                    <form action="{{route('stock.destroy',$s->id_product)}}" method="post">
-                            @csrf
-                            @method('delete')
-                            <button type="submit">
-                                delete
-                            </button>
-                        </form>
+                    <form id="deleteForm" action="{{ route('stock.destroy', $s->id_product) }}" method="post">
+                        @csrf
+                        @method('delete')
+                        <button type="button" onclick="confirmDelete()">
+                            Delete
+                        </button>
+                    </form>
                 </td>
-                <!-- Tambahkan kolom sesuai kebutuhan Anda -->
             </tr>
         @endforeach
     </tbody>
 </table>
+
+<script>
+    function confirmDelete() {
+        // Gunakan fungsi confirm JavaScript untuk menampilkan konfirmasi
+        var result = confirm("Are you sure you want to delete this data?");
+        
+        // Jika pengguna menekan tombol "OK" dalam konfirmasi
+        if (result) {
+            // Submit formulir untuk menghapus data
+            document.getElementById('deleteForm').submit();
+        }
+    }
+</script>
 @endsection

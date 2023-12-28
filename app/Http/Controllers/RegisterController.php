@@ -20,7 +20,8 @@ class RegisterController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email:dns|unique:users',
             'password' => 'required|min:5|max:255',
-            'provider' => 'required|max:10'
+            'provider' => 'required|max:10',
+            'role' => 'required|max:10',
         ]);
         // var_dump($validatedData);
 

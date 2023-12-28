@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
 use File;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class StockController extends Controller
 {
@@ -43,6 +44,7 @@ class StockController extends Controller
         $stock->image = $imageName;
         $stock->save();
 
+        Alert::success('Product Added', 'Operation successful!');
         return redirect('/stock');
     }
 
@@ -92,6 +94,8 @@ class StockController extends Controller
             $stock->image=$request->image;
             $stock->save();
         }
+
+        Alert::success('Product Updated', 'Operation successful!');
         return redirect('/stock');
     }
 
@@ -103,6 +107,7 @@ class StockController extends Controller
         $stock = Product::FindOrFail($id_product);
         $stock->delete();
 
+        Alert::success('Product Deleted', 'Operation successful!');
         return redirect('/stock');
     }
 }

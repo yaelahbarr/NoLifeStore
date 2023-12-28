@@ -65,6 +65,7 @@
 
 
 
+    @include('sweetalert::alert')
 
     <!-- Script  -->
     <script>
@@ -75,6 +76,9 @@
             sideNav.classList.toggle('hidden');
         });
     </script>
+
+
+
 </body>
 
 </html>
