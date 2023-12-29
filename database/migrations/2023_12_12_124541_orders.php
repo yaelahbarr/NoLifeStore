@@ -22,8 +22,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('phone_number', 15);
             $table->string('address');
-            $table->string('cities');
-            $table->string('provinces');
             $table->string('postal_code', 5);
             $table->string('bank');
             $table->unsignedBigInteger('sub_total');

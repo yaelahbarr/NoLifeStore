@@ -27,7 +27,7 @@ class LoginController extends Controller
             if (Auth::user()->role == 'admin') {
                 return redirect('/dashboard');
             } elseif (Auth::user()->role == 'user') {
-                return redirect('/');
+                return redirect('/home');
             }
         }
         return back()->with('loginError', 'Login Failed');

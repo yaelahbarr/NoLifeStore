@@ -19,7 +19,8 @@ return new class extends Migration
             $table->foreign('id_user')->references('id')->on('users');
             $table->unsignedBigInteger('id_order');
             $table->foreign('id_order')->references('id_order')->on('orders');
-            $table->unsignedBigInteger('total_order');
+            $table->unsignedBigInteger('total_order');      
+            $table->string('status', 20);
             $table->timestamps();
         });
     }

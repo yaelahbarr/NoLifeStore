@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\StockController;
@@ -34,10 +36,9 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 // Buat yang login user
 Route::group(['middleware'=>'auth'], function(){
-    Route::get('/home', function () {
-        // return view('index');
-        return 'ini user';
-    });
+    Route::get('/home', [HomeController::class, 'index']);
+    Route::get('/cart', [CartController::class, 'index']);
+    Route::post('/cart/{id_product}', [CartController::class, 'orderItem'])->name('cart.order');
     
 });
 
@@ -47,7 +48,7 @@ Route::group(['middleware' => 'isAdmin'], function() {
     Route::resource('/customer', CustomerController::class);
     Route::resource('/stock', StockController::class);
     Route::resource('/order', OrderController::class);
-
+    Route::get('/report', [OrderController::class, 'generatePDF']);
 });
 
 // Buat yang belum login

@@ -14,7 +14,10 @@
                     <p>Rp {{ number_format($product->price) }}</p>
                 </div>
                 <div class="px-6 py-4">
-                    <a href="/products" class="bg-blue-500 text-white px-4 py-2 rounded-md">Buy</a>
+                    <form action="{{ route('cart.order', ['id_product' => $product->id_product]) }}" method="post">
+                        @csrf
+                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Buy</button>
+                    </form>
                 </div>
             </div>
         </div>

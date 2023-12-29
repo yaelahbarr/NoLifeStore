@@ -42,9 +42,7 @@
             </div>
 
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button>
-                    <i class="fas fa-shopping-cart  text-lg"></i>
-                </button>
+                <a href="/cart"><i class="fas fa-shopping-cart  text-lg"></i></a>
             </div>
 
             <!-- ... Bagian Login & Logout ... -->

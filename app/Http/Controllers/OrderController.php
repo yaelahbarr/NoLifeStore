@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Order;
+use PDF;
 
 class OrderController extends Controller
 {
@@ -11,7 +13,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.order.order', [
+            'order' => Order::all()
+        ]);
     }
 
     /**
@@ -60,5 +64,13 @@ class OrderController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function generatePDF()
+    {
+        $data = ['title' => 'Report Order', 'order' => Order::all()];
+        $pdf = PDF::loadView('admin.order.report', $data);
+
+        return $pdf->download('Report-Order.pdf');
     }
 }
