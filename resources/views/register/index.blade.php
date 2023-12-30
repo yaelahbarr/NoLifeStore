@@ -124,11 +124,13 @@
                       <input class="uk-input" type="password" id="password" placeholder="Enter your password" name="password">
                   </div>
               </div>
-              <div class="uk-margin">
-                <button class="uk-button uk-button-primary">Sign Up</button>
+              <div class="uk-margin text-center">
+                <button class="uk-button uk-button-primary uk-border-rounded">Sign Up</button>
               </div>
           </form>
+          <div class="uk-margin text-center">
           <small class="">You have account? <a href="/login">Login here!</a></small>
+        </div>
       </div>
   </div>
 </div> 
