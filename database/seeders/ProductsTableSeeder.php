@@ -16,7 +16,7 @@ class ProductsTableSeeder extends Seeder
         DB::table('products')->insert([['id_product' => 1, 'id_category' => '1', 'product_name' => 'NVDIA RTX 4060 Ti GAMING X SLIM 8G', 'price' => '8000000', 'stock' => '10', 'image' => 'vga_rtx4060.png'],
             ['id_product' => 12, 'id_category' => '1', 'product_name' => 'NVDIA ASUS GeForce RTX3060', 'price' => '400000', 'stock' => '10', 'image' => 'vga_rtx3060.png'],
             ['id_product' => 13, 'id_category' => '1', 'product_name' => 'AMD RADEON RX6600XT', 'price' => '200000', 'stock' => '10', 'image' => 'vga_rx6600.jpg'],
-            ['id_product' => 14, 'id_category' => '1', 'product_name' => 'AMD RADEON RX6600XT', 'price' => '1259999', 'stock' => '10', 'image' => 'vga_rx580.jpg'],
+            ['id_product' => 14, 'id_category' => '1', 'product_name' => 'AMD RADEON RX580', 'price' => '1259999', 'stock' => '10', 'image' => 'vga_580.jpg'],
             ['id_product' => 3, 'id_category' => '2', 'product_name' => 'MSI B760M', 'price' => '1689000', 'stock' => '10', 'image' => 'motherboard_msib760m.jpeg'],
             ['id_product' => 31, 'id_category' => '2', 'product_name' => 'MSI B450M-APROMAX', 'price' => '970001', 'stock' => '10', 'image' => 'MOTHERBOARD_MSIB450M-APROMAX.jpeg'],
             ['id_product' => 32, 'id_category' => '2', 'product_name' => 'MSI MAGB560M', 'price' => '100000', 'stock' => '10', 'image' => 'MOTHERBOARD_MSIMAGB560MMORTARWIFI.jpeg'],
