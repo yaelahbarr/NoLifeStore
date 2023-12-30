@@ -1,7 +1,7 @@
 @extends('user.layouts.layouts')
 
 @section('container')
-<div class="uk-container">
+<div class="uk-container text-center">
     <div class="flex flex-wrap -mx-4">
         @foreach($products as $product)
         <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 px-4 mb-8 mt-10">
@@ -16,7 +16,7 @@
                 <div class="px-6 py-4">
                     <form action="{{ route('cart.order', ['id_product' => $product->id_product]) }}" method="post">
                         @csrf
-                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Buy</button>
+                        <button type="submit" class="transform transition-transform duration-300 group-hover:scale-105 hover:text-black bg-blue-500 text-white px-4 py-2 rounded-md">Buy</button>
                     </form>
                 </div>
             </div>
