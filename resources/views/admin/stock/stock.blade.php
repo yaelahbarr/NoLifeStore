@@ -1,7 +1,13 @@
 @extends('admin.layouts.main')
 
 @section('container')
-<a href="/stock/create">Add Stock</a>
+<div class="flex justify-between items-center mb-4">
+<a href="/stock/create" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Stock</a>
+<div>
+    <input type="text" name="text" class="border rounded py-1 px-2 " placeholder="Search...">
+    <button type="submit" class="bg-blue-500 hover:bg-gray-400 text-white py-1 px-3 rounded ">Search</button>
+</div>
+</div>
 <table class="min-w-full divide-y divide-gray-200">
     <thead>
         <tr>
@@ -14,7 +20,7 @@
             <!-- Tambahkan kolom sesuai kebutuhan Anda -->
         </tr>
     </thead>
-    <tbody class="bg-white divide-y divide-gray-200">
+    <tbody class="bg-white divide-y divide-gray-200 ">
         @foreach($stocks as $s)
             <tr>
                 <td class="px-6 py-4 whitespace-no-wrap">{{ $s->product_name }}</td>
@@ -23,11 +29,13 @@
                 <td class="px-6 py-4 whitespace-no-wrap">{{ $s->stock }}</td>
                 <td class="px-6 py-4 whitespace-no-wrap"><img src="ProductImage/{{ $s->image }}" width="100px" alt=""></td>
                 <td class="px-6 py-4 whitespace-no-wrap">
-                    <a href="{{ route('stock.edit', $s->id_product) }}">Edit</a>
+                    <div class="button mb-2">
+                    <a href="{{ route('stock.edit', $s->id_product) }}" class="bg-green-500 hover:bg-green-700 text-white py-1 px-5 rounded">Edit</a>
                     <form id="deleteForm" action="{{ route('stock.destroy', $s->id_product) }}" method="post">
+                    </div>
                         @csrf
                         @method('delete')
-                        <button type="button" onclick="confirmDelete()">
+                        <button type="button" onclick="confirmDelete()" class="bg-red-500 hover:bg-red-700 text-white py-1 px-3 rounded ">
                             Delete
                         </button>
                     </form>
