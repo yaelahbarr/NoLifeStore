@@ -17,13 +17,6 @@
                     NoLifeStore
                 </div>
             </div>
-
-            <div class="space-x-4">
-                <button>
-                    <i class="fas fa-bell text-lg"></i>
-                </button>
-            
-            </div>
         </div>
     </nav>
 
