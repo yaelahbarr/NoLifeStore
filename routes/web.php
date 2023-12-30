@@ -39,6 +39,7 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/home', [HomeController::class, 'index']);
     Route::get('/cart', [CartController::class, 'index']);
     Route::post('/cart/{id_product}', [CartController::class, 'orderItem'])->name('cart.order');
+    Route::delete('/cart/destroy/{id_order_detail}', [CartController::class, 'destroy']);
     
 });
 

@@ -31,8 +31,8 @@
                 <td class="px-6 py-4 whitespace-no-wrap">
                     <div class="button mb-2">
                     <a href="{{ route('stock.edit', $s->id_product) }}" class="bg-green-500 hover:bg-green-700 text-white py-1 px-5 rounded">Edit</a>
-                    <form id="deleteForm" action="{{ route('stock.destroy', $s->id_product) }}" method="post">
                     </div>
+                    <form id="deleteForm" action="{{ route('stock.destroy', $s->id_product) }}" method="post">
                         @csrf
                         @method('delete')
                         <button type="button" onclick="confirmDelete()" class="bg-red-500 hover:bg-red-700 text-white py-1 px-3 rounded ">

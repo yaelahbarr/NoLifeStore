@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Order;
 use App\Models\OrderDetail;
 use App\Models\Product;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CartController extends Controller
 {
@@ -47,6 +48,15 @@ class CartController extends Controller
             'status' => 'pending'
         ]);
 
+        return redirect('/cart');
+    }
+
+    public function destroy( $id_order_detail)
+    {
+        $stock = OrderDetail::FindOrFail($id_order_detail);
+        $stock->delete();
+
+        Alert::success('Product Removed', 'Operation successful!');
         return redirect('/cart');
     }
 
