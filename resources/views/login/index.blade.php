@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/css/uikit.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 </head>
-<body class="uk-background-cover uk-background-center-center" style="background-image: url('/img/bgrd.pnggi  cle');">
+<body class="uk-background-cover uk-background-center-center" style="background-image: url('/img/bgrd.png');">
 
 <!-- Navbar -->
 <nav class="bg-gray-800">
@@ -133,6 +133,7 @@
 
 
 <br>
+
 </div>
 </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
