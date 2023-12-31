@@ -1,8 +1,8 @@
 @extends('admin.layouts.main')
 
 @section('container')
-<div class="container mx-auto mt-8">
-    <h1 class="text-2xl font-semibold mb-4">Add New Product</h1>
+<div class="container mx-auto mt-8 mx-2">
+    <h1 class="text-2xl font-semibold mb-2 bg-gray-800 hover:bg-blue-700 text-white py-2 px-8 rounded text-center">Add New Product</h1>
 
         <form action="{{ route('stock.store') }}" method="post" enctype="multipart/form-data">
             @csrf
