@@ -18,31 +18,31 @@
             </div>
 
             <!-- Nama Produk -->
-            <div class="mb-4">
+            <div class="mb-4 mx-start max-w-md">
                 <label for="name" class="block text-sm font-medium text-gray-700">Product Name</label>
                 <input type="text" name="product_name" id="name" class="mt-1 block w-full border-gray-300 rounded-md focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
 
             <!-- Harga -->
-            <div class="mb-4">
+            <div class="mb-4 mx-start max-w-md">
                 <label for="price" class="block text-sm font-medium text-gray-700">Price</label>
                 <input type="number" name="price" id="price" class="mt-1 block w-full border-gray-300 rounded-md focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
 
             <!-- Stok -->
-            <div class="mb-4">
+            <div class="mb-4 mx-start max-w-md">
                 <label for="stock" class="block text-sm font-medium text-gray-700">Stock</label>
                 <input type="number" name="stock" id="stock" class="mt-1 block w-full border-gray-300 rounded-md focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
 
             <!-- Gambar -->
-            <div class="mb-4">
+            <div class="mb-4 mx-start max-w-md">
                 <label for="image" class="block text-sm font-medium text-gray-700">Image</label>
                 <input type="file" name="image" id="image" class="mt-1 block w-full border-gray-300 rounded-md focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
 
             <!-- Tombol Submit -->
-            <div class="mb-4">
+            <div class="mb-4 mx-start max-w-md">
                 <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Submit</button>
             </div>
         </form>
