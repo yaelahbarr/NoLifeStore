@@ -1,14 +1,17 @@
-stock blade
 @extends('admin.layouts.main')
 
 @section('container')
 <br>
 <br>
+<br>
+
 <div class="flex justify-between items-center mb-3"> 
 <a href="/stock/create" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">Add Stock</a>
 <div>
-    <input type="text" name="text" class="border rounded py-1 px-2 " placeholder="Search...">
-    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-3 rounded ">Search</button>
+    <form action="/stock">
+        <input type="text" name="text" class="border rounded py-1 px-2 " placeholder="Search...">
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-3 rounded ">Search</button>
+    </form>
 </div>
 </div>
 <table class="min-w-full divide-y divide-gray-200">

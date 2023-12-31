@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
 use File;
+use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class StockController extends Controller
@@ -15,7 +16,12 @@ class StockController extends Controller
      */
     public function index()
     {
-        return view('admin.stock.stock', ['stocks' => Product::all()]);
+        if(request('search')) {
+            $stock->where('product_name', 'like', '%', request('search') . '%');
+        }
+        return view('admin.stock.stock', [
+            'stocks' => Product::all()
+        ]);
     }
 
     /**
@@ -40,7 +46,7 @@ class StockController extends Controller
         $image = $request->image;
         $imageName = time().'.'.
         $image->extension();
-        $request->image->move(public_path().'/ProductImage', $imageName);
+        $request->image->move(public_path().'/img', $imageName);
         $stock->image = $imageName;
         $stock->save();
 
@@ -75,9 +81,9 @@ class StockController extends Controller
         $image =$request->image;
         if($image != NULL){
             $stock=Product::FindOrFail($id);
-            File::delete('ProductImage/'.$stock->image);
+            File::delete('img/'.$stock->image);
             $imageName = time().'.'.$image->extension();
-            $request->image->move(public_path('ProductImage/'), $imageName);
+            $request->image->move(public_path('img/'), $imageName);
             $stock->id_category=$request->id_category;
             $stock->product_name=$request->product_name;
             $stock->price=$request->price;
@@ -104,9 +110,9 @@ class StockController extends Controller
      */
     public function destroy(string $id_product)
     {
-        $stock = Product::FindOrFail($id_product);
-        $stock->delete();
-
+        $affected = DB::table('products')->where('id_product', $id_product)->delete();
+        // $stock = Product::FindOrFail($id_product);
+        // $stock->delete();
         Alert::success('Product Deleted', 'Operation successful!');
         return redirect('/stock');
     }

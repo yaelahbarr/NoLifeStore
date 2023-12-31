@@ -14,19 +14,19 @@ dashboard blade
                 <!-- Card 1 -->
                 <div class="bg-gray-100 p-4 rounded-md">
                     <h3 class="text-lg font-semibold mb-2">Total Sales</h3>
-                    <p class="text-gray-700">Rp. 90.000.000</p>
+                    <p class="text-gray-700">Rp. {{ number_format($totalSales) }}</p>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="bg-gray-100 p-4 rounded-md">
                     <h3 class="text-lg font-semibold mb-2">Total Stock</h3>
-                    <p class="text-gray-700">41.000 Product</p>
+                    <p class="text-gray-700">{{ $totalProduct }} Product</p>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="bg-gray-100 p-4 rounded-md">
                     <h3 class="text-lg font-semibold mb-2">Total Customer</h3>
-                    <p class="text-gray-700">10 Users</p>
+                    <p class="text-gray-700">{{ $totalCustomer }} Users</p>
                 </div>
             </div>
         </div>

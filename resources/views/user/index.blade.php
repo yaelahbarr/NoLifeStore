@@ -111,32 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <img data-aos="fade-down"  data-aos-duration="1000" src="/img/bannerkursi.jpg" alt="" class="h-full w-full object-cover object-center group-hover:opacity-75">
         </div>
         <h3 class="mt-1 text-lg font-medium text-gray-900">CHAIR</h3>
-      </a>
-      <a href="/img/SSD.jpg" class="group">
-        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
-          <img data-aos="fade-down"  data-aos-duration="1000" src="/img/SSD.jpg" alt="" class="h-full w-full object-cover object-center group-hover:opacity-75">
-        </div>
-        <h3 class="mt-1 text-lg font-medium text-gray-900">SOLID STATE DRIVE</h3>
-      </a>
-      <a href="/img/HDD.jpg"  class="group">
-        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
-            <img data-aos="fade-down"  data-aos-duration="1000" src="/img/HDD.jpg" alt="" class="h-full w-full object-cover object-center">
-        </div>
-        <h3 class="mt-1 text-lg font-medium text-gray-900">HARD DRIVE</h3>
-    </a>    
-      <a href="/img/Intel.jpeg"  class="group">
-        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
-            <img data-aos="fade-down"  data-aos-duration="1000" src="/img/Intel.jpeg" alt="" class="h-full w-full object-cover object-center">
-        </div>
-        <h3 class="mt-1 text-lg font-medium text-gray-900">INTEL</h3>
-    </a>    
-    </a>    
-      <a href="/img/AMD.jpg"  class="group">
-        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 transform transition-transform duration-300 group-hover:scale-105">
-            <img data-aos="fade-down" data-aos-duration="1000" src="/img/AMD.jpg" alt="" class="h-full w-full object-cover object-center">
-        </div>
-        <h3 class="mt-1 text-lg font-medium text-gray-900">AMD</h3>
-    </a>    
+      </a>   
+    </a>     
     </div>
   </div>
 </div>

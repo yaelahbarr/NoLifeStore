@@ -21,9 +21,9 @@ class CartController extends Controller
         return view('user.cart.cart', compact('orderedItems'));
     }
 
-    public function orderItem(Request $request, $id_product)
+    public function orderItem(Request $request)
     {
-        $stock = Product::find($id_product);
+        $stock = Product::find($request->id_product);
 
         $order = Order::firstOrNew([
             'id_user' => Auth::id(),
@@ -40,13 +40,17 @@ class CartController extends Controller
         ]);
         $order->save();
 
-        OrderDetail::create([
+        // dd($order->id_order);
+
+        $cek = OrderDetail::create([
             'id_product' => $stock->id_product,
             'id_user' => Auth::id(),
             'id_order' => $order->id_order, 
             'total_order' => 1,
             'status' => 'pending'
         ]);
+
+        // dd($cek);
 
         return redirect('/cart');
     }
