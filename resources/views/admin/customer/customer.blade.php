@@ -1,8 +1,10 @@
+customer blade
 @extends('admin.layouts.main')
 
 @section('container')
 <!-- resources/views/table.blade.php -->
-
+<br>
+<br>
 <table class="min-w-full divide-y divide-gray-200">
     <thead>
         <tr>
