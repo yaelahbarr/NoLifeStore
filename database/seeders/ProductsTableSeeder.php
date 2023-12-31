@@ -13,6 +13,7 @@ class ProductsTableSeeder extends Seeder
      */
     public function run(): void
     {
+
         DB::table('products')->insert([
             ['id_product' => 1, 'id_category' => '1', 'product_name' => 'NVDIA RTX 4060 Ti GAMING X SLIM 8G', 'price' => '8000000', 'stock' => '10', 'image' => 'vga_rtx4060.png'],
             ['id_product' => 2, 'id_category' => '1', 'product_name' => 'NVDIA ASUS GeForce RTX3060', 'price' => '400000', 'stock' => '10', 'image' => 'vga_rtx3060.png'],
