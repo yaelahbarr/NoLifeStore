@@ -1,8 +1,11 @@
+dashboard blade
 @extends('admin.layouts.main')
 
 @section('container')
 
           <!-- Dashboard Content -->
+          <br>
+          <br>
         <div class="bg-white p-6 rounded-lg border border-gray-200 mb-4 shadow-md">
             <h2 class="text-xl font-semibold mb-4">Dashboard Overview</h2>
 
