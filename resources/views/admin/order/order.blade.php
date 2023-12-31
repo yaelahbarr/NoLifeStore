@@ -1,7 +1,12 @@
+order blade
 @extends('admin.layouts.main')
 
 @section('container')
-<a href="/report">Report PDF</a>
+<br>
+<br>
+<div class="flex justify-between items-center mb-3"> 
+<a href="/report" class="bg-red-500 hover:bg-blue-700 text-white py-2 px-4 rounded">Report PDF</a>
+</div>
 <table class="min-w-full divide-y divide-gray-200">
     <thead>
         <tr>
