@@ -1,14 +1,14 @@
 @extends('admin.layouts.main')
 
 @section('container')
-<div class="container mx-auto mt-8 mx-2">
+<div class="container mx-auto mt-8">
     <h1 class="text-2xl font-semibold mb-2 bg-gray-800 text-white py-2 px-8 rounded text-center ">Add New Product</h1>
 
         <form action="{{ route('stock.store') }}" method="post" enctype="multipart/form-data">
             @csrf
 
             <!-- Kategori -->
-            <div class="mb-4">
+            <div class="mb-4 mx-start max-w-md">
                 <label for="category" class="block text-sm font-medium text-gray-700">Category</label>
                 <select name="id_category" id="category" class="mt-1 block w-full border-gray-300 rounded-md focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                     @foreach ($category as $c)
